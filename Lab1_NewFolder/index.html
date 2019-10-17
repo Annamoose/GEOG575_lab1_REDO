@@ -1,0 +1,68 @@
+<!--
+Ann Fritz GEOG 575  - October 2019 Lab 1 Leaflet
+map of average annual Phosphorus concentrations over 20 years in North Dakota lakes.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>A.Fritz Leaflet Lab</title>
+
+		<!--library stylesheets-->
+		<link rel="stylesheet" href="lib/leaflet.css">
+		<link rel="stylesheet" href="lib/leaflet.markercluster/MarkerCluster.css">
+		<link rel="stylesheet" href="lib/leaflet.markercluster/MarkerCluster.Default.css">
+        
+        <!-- Bootstrap Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ 
+		<!--my stylesheet-->
+		<link rel="stylesheet" href="css/style.css">
+        
+	</head>
+
+	<body>
+    <div class="container-fluid">
+        <div id="wrapper"> 
+            <div class="intro"> 
+        <h1>Phosphorus in North Dakota Lakes</h1>
+            <p>Scientists at the North Dakota Department of Environmental Quality have been sampling for nutrients in the state's lakes for almost 30 years.  Samples are collected at least once per year in selected lakes, but sometimes as many as five times a year to determine seasonal nutrient variability.  Phosphorus concentrations depicted on this map represent the average annual total dissolved phosphorus in milligrams per liter.    
+            </p>
+            <p>Agricultural activity can increase the amount of nutrients, especially phosphorus, available to plants in streams.  Urban runoff can also contribute to excessive nutrients.  Excessive nutrients in the water can lead to excessive algae growth and could impair water quality for agricultural and domestic uses. North Dakota sit not only an international border, but also a continental drainage divide.  The Missouri River and it's tributaries in the central and western part of the state, flow south. These streams ultimately enter the Mississippi River at St. Louis, Missouri.  The Red River of the North and it's tributaries in the eastern part of the state flow north into Canada. (And the Souris River flows both south and north across the US-Canadian border!).  Water quality in the state is of national and international importance; flows in North Dakota are either near the headwaters or outlets of significant drainage areas. </p>  
+ 
+             </div>
+
+            <div id="map"></div>
+            <div id="panel"></div>  
+        </div>
+    </div>
+
+        <!-- footer with source data information-->     
+   <hr>
+       <div class="row">
+          <div class="text-center col-lg-6 offset-lg-3">
+             <h4> </h4>
+             <p>Ann Fritz &middot; GEOG 575 Lab 1 &middot; 2019 &middot; Twenty-nine years of phosphorus measurements from lakes in North Dakota (1991 - 2019). </p> 
+              <p>Source data found at <a href="https://deq.nd.gov/WQ/3_Watershed_Mgmt/6_DataPortal/Data.aspx"> NDDEQ Water Quality Data Portal.</a> Results reported as average annual total dissolved P.</p>
+          </div>
+       </div>   
+
+		<!--library scripts-->
+		<script type="text/javascript" src="lib/jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="lib/leaflet-src.js"></script>
+        <!-- Esri Leaflet -->
+        <script src="https://unpkg.com/esri-leaflet@2.3.1/dist/esri-leaflet.js"
+    integrity="sha512-Np+ry4Dro5siJ1HZ0hTwn2jsmu/hMNrYw1EIK9EjsEVbDge4AaQhjeTGRg2ispHg7ZgDMVrSDjNrzH/kAO9Law=="
+    crossorigin=""></script>
+        
+        <!-- Vector Tiles -->
+<script src="https://unpkg.com/esri-leaflet-vector@2.0.2/dist/esri-leaflet-vector.js"
+    integrity="sha512-keaVwrBxpBNq1XF5XEUvQ8NtoBbGPs/gKJJ3tp1qiudO3mTk9YEa6/uPpxX/G2HIjFrquj/xGg+p/c7nDp0wUg=="
+    crossorigin=""></script>
+
+		<!--main script-->
+		<script type="text/javascript" src="js/mainCopy.js"></script>
+	</body>
+</html>
